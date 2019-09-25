@@ -12,6 +12,9 @@
 
 #define MOD_CMD MOD_LGUI 
 
+#define DE_OSX_LT    KC_NUBS
+#define DE_OSX_GT    S(KC_NUBS)
+
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
 
@@ -29,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LYR_NUMS_OSX] = LAYOUT(
     DE_OSX_DLR,  DE_OSX_PERC, DE_OSX_BSLS, DE_OSX_LCBR, DE_OSX_RCBR,                   DE_OSX_ASTR, KC_7, KC_8,   KC_9,    DE_OSX_PARA,
     DE_OSX_AT,   DE_OSX_AMPR, DE_OSX_SLSH, DE_OSX_LPRN, DE_OSX_RPRN,                   DE_OSX_EQL,  KC_4, KC_5,   KC_6,    DE_OSX_MINS,
-    DE_OSX_PIPE, DE_OSX_CIRC, DE_OSX_RING, DE_OSX_LBRC, DE_OSX_RBRC,                   DE_OSX_PLUS, KC_1, KC_2,   KC_3,    KC_TRNS,
+    DE_OSX_PIPE, DE_OSX_LT,   DE_OSX_GT,   DE_OSX_LBRC, DE_OSX_RBRC,                   DE_OSX_PLUS, KC_1, KC_2,   KC_3,    KC_TRNS,
     KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,     KC_0, KC_DOT, KC_COMM, KC_TRNS
   ),
 
