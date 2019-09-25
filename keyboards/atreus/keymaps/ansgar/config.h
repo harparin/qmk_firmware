@@ -16,5 +16,3 @@
 
 #define TAPPING_TERM 260
 
-#define MATRIX_ROW_PINS { B4, B2, B5, B6 }
-#define MATRIX_COL_PINS { F6, F5, F7, B1, B3, E6, D7, C6, D4, D0, D1 }
