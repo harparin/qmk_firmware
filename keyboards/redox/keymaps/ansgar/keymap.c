@@ -51,7 +51,6 @@ enum custom_keycodes {
 
 #define KC_NAMI LT(_NAV, DE_SS)
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LYR_BASE] = LAYOUT(
@@ -60,21 +59,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TRNS ,DE_UE   ,DE_O    ,DE_E    ,DE_P    ,KC_Z    ,SYM_L   ,                          SYM_L   ,DE_F    ,DE_G    ,DE_T    ,DE_N    ,DE_L    ,KC_TRNS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TAB  ,DE_A    ,DE_COMM ,DE_DOT  ,DE_U    ,DE_I    ,DE_ACUT ,                          DE_PLUS ,DE_D    ,DE_H    ,DE_C    ,DE_R    ,DE_S    ,DE_MINS ,
+     KC_TAB  ,DE_A    ,DE_COMM ,DE_DOT  ,DE_U    ,DE_I    ,KC_TRNS ,                          DE_PLUS ,DE_D    ,DE_H    ,DE_C    ,DE_R    ,DE_S    ,DE_MINS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT ,DE_OE   ,DE_Q    ,DE_J    ,DE_K    ,DE_X    ,KC_PGUP ,KC_PGDN ,        KC_HOME ,KC_END  ,DE_B    ,DE_M    ,DE_W    ,DE_V    ,DE_Z    ,KC_RSFT ,
-  //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     KC_LCTL ,DE_AE   ,TT(3)   ,LT_HASH ,     TT(1)   ,    LT_BSPC ,LT_DEL  ,        LT_ENT  ,LT_SPC  ,    TT(1),        LT_DQUOT,TT(3)   ,DE_SS   ,KC_RCTL 
+  //├────────┼────────┼────────┼ ────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
+     KC_LCTL ,DE_AE   ,MO(3)   ,LT_HASH ,     TT(1)   ,    LT_BSPC ,LT_DEL  ,        LT_ENT  ,LT_SPC  ,    TT(1),        LT_DQUOT,TT(3)   ,DE_SS   ,KC_RCTL 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
 
   [LYR_NUMS] = LAYOUT(
-     _______ ,KC_F1,       KC_F2,       KC_F3,       KC_F4,       KC_F5,                                          KC_F6   ,KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,KC_F11  ,
-     _______ ,DE_OSX_DLR,  DE_OSX_PERC, DE_OSX_BSLS, DE_OSX_LCBR, DE_OSX_RCBR,_______ ,                  _______ ,XXXXXXX ,KC_KP_7 ,KC_KP_8 ,KC_KP_9 ,XXXXXXX ,KC_F12  ,
-     _______ ,DE_OSX_AT,   DE_OSX_AMPR, DE_OSX_SLSH, DE_OSX_LPRN, DE_OSX_RPRN,_______ ,                  _______ ,XXXXXXX ,KC_KP_4 ,KC_KP_5 ,KC_KP_6 ,DE_SS   ,XXXXXXX ,
-     _______ ,DE_OSX_PIPE, DE_OSX_LT,   DE_OSX_GT,   DE_OSX_LBRC, DE_OSX_RBRC,_______ ,_______ ,_______ ,_______ ,XXXXXXX ,KC_KP_1 ,KC_KP_2 ,KC_KP_3 ,XXXXXXX ,KC_RSFT ,
-     _______ ,_______    , _______ ,    _______ ,    _______ ,    _______ ,   _______ ,_______ ,_______ ,    KC_KP_0 ,     KC_KP_0 ,KC_PDOT ,XXXXXXX ,XXXXXXX 
+     _______ ,KC_F1,       KC_F2,       KC_F3,       KC_F4,       KC_F5,                                          KC_F6,       KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,KC_F11  ,
+     _______ ,DE_OSX_DLR,  DE_OSX_PERC, DE_OSX_BSLS, DE_OSX_LCBR, DE_OSX_RCBR,_______ ,                  _______ ,DE_OSX_ASTR ,KC_KP_7 ,KC_KP_8 ,KC_KP_9 ,XXXXXXX ,KC_F12  ,
+     _______ ,DE_OSX_AT,   DE_OSX_AMPR, DE_OSX_SLSH, DE_OSX_LPRN, DE_OSX_RPRN,_______ ,                  _______ ,DE_OSX_EQL , KC_KP_4 ,KC_KP_5 ,KC_KP_6 ,DE_SS   ,XXXXXXX ,
+     _______ ,DE_OSX_PIPE, DE_OSX_LT,   DE_OSX_GT,   DE_OSX_LBRC, DE_OSX_RBRC,_______ ,_______ ,_______ ,_______ ,DE_OSX_PLUS ,KC_KP_1 ,KC_KP_2 ,KC_KP_3 ,XXXXXXX ,KC_RSFT ,
+     _______ ,_______    , _______ ,    _______ ,              _______ ,      _______ ,_______ ,_______ ,_______ ,        KC_KP_0 ,     DE_DOT , DE_COMM ,_______, _______
   ),
 
   [_NAV] = LAYOUT(
@@ -106,4 +105,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
 };
-
