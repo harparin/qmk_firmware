@@ -33,10 +33,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
 
-#define TAPPING_TERM 300
+#define TAPPING_TERM 220
+#define TAPPING_TERM_PER_KEY
 #define TAPPING_TOGGLE 3
 #define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
+#define PERMISSIVE_HOLD_PER_KEY
 
 #define FORCE_NKRO
 
